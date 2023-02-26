@@ -10,7 +10,17 @@ namespace CMP1903M_A01_2223
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Test");
+            Pack pack = new Pack();
+            pack.shuffleCardPack(1);
+            pack.shuffleCardPack(1);
+            pack.shuffleCardPack(1);
+            pack.shuffleCardPack(1);
+            pack.shuffleCardPack(1);
+            pack.shuffleCardPack(1);
+            pack.printPack();
 
+            Console.ReadLine();
         }
     }
 }
