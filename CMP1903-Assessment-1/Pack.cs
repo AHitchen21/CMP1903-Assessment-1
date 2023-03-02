@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMP1903_Assessment_1
 {
-    class Pack
+    public class Pack
     {
         List<Card> pack;
 
@@ -24,10 +24,9 @@ namespace CMP1903_Assessment_1
                     pack.Add(card);
                 }
             }
-            Console.WriteLine();
         }
 
-        public void shuffleCardPack(int typeOfShuffle)
+        public bool shuffleCardPack(int typeOfShuffle)
         {
             //Shuffles the pack based on the type of shuffle
             if (typeOfShuffle == 1)
@@ -45,6 +44,7 @@ namespace CMP1903_Assessment_1
 
                 } 
             }
+            return true;
         }
         /*
         public static Card deal()

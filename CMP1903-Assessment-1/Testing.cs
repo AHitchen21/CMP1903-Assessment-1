@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CMP1903_Assessment_1
 {
-    internal class Testing
+    public class Testing
     {
+        public Pack shuffleTest() 
+        {
+            Pack pack = new Pack();
+            pack.shuffleCardPack(1);
+            return pack;
+        }
     }
 }

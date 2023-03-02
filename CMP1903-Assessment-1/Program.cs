@@ -10,15 +10,9 @@ namespace CMP1903_Assessment_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
-            Pack pack = new Pack();
-            pack.shuffleCardPack(1);
-            pack.shuffleCardPack(1);
-            pack.shuffleCardPack(1);
-            pack.shuffleCardPack(1);
-            pack.shuffleCardPack(1);
-            pack.shuffleCardPack(1);
-
+            Testing test = new Testing();
+            Pack testPack = new Pack();
+            testPack = test.shuffleTest();
             Console.ReadLine();
         }
     }
