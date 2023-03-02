@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903M_A01_2223
+namespace CMP1903_Assessment_1
 {
     class Card
     {

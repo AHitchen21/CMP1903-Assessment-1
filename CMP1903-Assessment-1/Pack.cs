@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903M_A01_2223
+namespace CMP1903_Assessment_1
 {
     class Pack
     {
@@ -25,14 +25,6 @@ namespace CMP1903M_A01_2223
                 }
             }
             Console.WriteLine();
-        }
-        public void printPack() 
-        {
-            for (int i = 0; i <= 51; i++) 
-            {
-                Console.WriteLine(pack[i].Suit.ToString() + " " + pack[i].Value.ToString());
-            }
-            Console.WriteLine(pack.Count());
         }
 
         public void shuffleCardPack(int typeOfShuffle)
