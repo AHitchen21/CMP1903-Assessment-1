@@ -8,11 +8,11 @@ namespace CMP1903_Assessment_1
 {
     public class Testing
     {
-        public Pack shuffleTest() 
+        public void shuffleTest() 
         {
             Pack pack = new Pack();
-            pack.shuffleCardPack(1);
-            return pack;
+            Pack.shuffleCardPack(1);
+            pack.printPack();
         }
     }
 }

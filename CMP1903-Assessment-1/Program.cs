@@ -12,7 +12,7 @@ namespace CMP1903_Assessment_1
         {
             Testing test = new Testing();
             Pack testPack = new Pack();
-            testPack = test.shuffleTest();
+            test.shuffleTest();
             Console.ReadLine();
         }
     }

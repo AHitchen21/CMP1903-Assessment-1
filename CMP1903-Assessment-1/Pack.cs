@@ -8,7 +8,7 @@ namespace CMP1903_Assessment_1
 {
     public class Pack
     {
-        List<Card> pack;
+        static List<Card> pack;
 
         public Pack()
         {
@@ -26,7 +26,7 @@ namespace CMP1903_Assessment_1
             }
         }
 
-        public bool shuffleCardPack(int typeOfShuffle)
+        public static bool shuffleCardPack(int typeOfShuffle)
         {
             //Shuffles the pack based on the type of shuffle
             if (typeOfShuffle == 1)
@@ -45,6 +45,13 @@ namespace CMP1903_Assessment_1
                 } 
             }
             return true;
+        }
+        public void printPack() 
+        {
+            for (int i = 0; i <= 51; i++) 
+            {
+                Console.WriteLine(pack[i].Suit.ToString() + " " + pack[i].Value.ToString());
+            }
         }
         /*
         public static Card deal()
