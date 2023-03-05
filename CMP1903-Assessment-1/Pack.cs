@@ -42,23 +42,58 @@ namespace CMP1903_Assessment_1
                     pack.RemoveAt(position);
                     pack.Insert(position,temp);
 
-                } 
+                }
+                return true;
             }
-            return true;
+            else if (typeOfShuffle == 2) 
+            {
+                List<Card> halfPack1 = new List<Card>();
+                List<Card> halfPack2 = new List<Card>();
+                for (int i = 0; i <= 25; i++) 
+                {
+                    halfPack1.Add(pack[i]);
+                }
+                for (int i = 26; i <= 51; i++)
+                {
+                    halfPack2.Add(pack[i]);
+                }
+                pack.Clear();
+                for (int i = 0; i <= 25; i++) 
+                {
+                    pack.Add(halfPack1[i]);
+                    pack.Add(halfPack2[i]);
+                }
+                return true;
+            }
+            else if (typeOfShuffle == 3)
+            {
+                return true; 
+            }
+            else { return false; }
+
         }
         public void printPack() 
         {
-            for (int i = 0; i <= 51; i++) 
+            for (int i = 0; i <= pack.Count - 1; i++) 
             {
                 Console.WriteLine(pack[i].Suit.ToString() + " " + pack[i].Value.ToString());
             }
         }
-        /*
         public static Card deal()
         {
             //Deals one card
-
+            try 
+            {
+                Card dealCard = pack[0];
+                pack.RemoveAt(0);
+                return dealCard;
+            }
+            catch (System.NullReferenceException e) 
+            {
+                throw new NullReferenceException("No more cards to deal");
+            }
         }
+        /*
         public static List<Card> dealCard(int amount)
         {
             //Deals the number of cards specified by 'amount'

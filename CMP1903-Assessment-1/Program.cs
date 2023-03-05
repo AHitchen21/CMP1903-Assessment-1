@@ -11,8 +11,7 @@ namespace CMP1903_Assessment_1
         static void Main(string[] args)
         {
             Testing test = new Testing();
-            Pack testPack = new Pack();
-            test.shuffleTest();
+            test.testDeal();
             Console.ReadLine();
         }
     }
