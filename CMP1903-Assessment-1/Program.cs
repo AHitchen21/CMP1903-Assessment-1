@@ -11,7 +11,7 @@ namespace CMP1903_Assessment_1
         static void Main(string[] args)
         {
             Testing test = new Testing();
-            test.testDeal();
+            test.testMultiDeal();
             Console.ReadLine();
         }
     }

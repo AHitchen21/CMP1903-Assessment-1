@@ -74,7 +74,7 @@ namespace CMP1903_Assessment_1
         }
         public void printPack() 
         {
-            for (int i = 0; i <= pack.Count - 1; i++) 
+            for (int i = 0; i < pack.Count; i++) 
             {
                 Console.WriteLine(pack[i].Suit.ToString() + " " + pack[i].Value.ToString());
             }
@@ -88,15 +88,28 @@ namespace CMP1903_Assessment_1
                 pack.RemoveAt(0);
                 return dealCard;
             }
-            catch (System.NullReferenceException e) 
+            catch (NullReferenceException e) 
             {
                 throw new NullReferenceException("No more cards to deal");
             }
         }
-        /*
         public static List<Card> dealCard(int amount)
         {
             //Deals the number of cards specified by 'amount'
-        }*/
+            try 
+            {
+                List<Card> dealtCards = new List<Card>();
+                for (int i = 0; i < amount; i++) 
+                {
+                    dealtCards.Add(pack[0]);
+                    pack.RemoveAt(0);
+                }
+                return dealtCards;
+            }
+            catch (ArgumentOutOfRangeException e) 
+            {
+                throw new IndexOutOfRangeException("Not enough Cards to deal specified amount.");
+            }
+        }
     }
 }

@@ -30,5 +30,13 @@ namespace CMP1903_Assessment_1
             pack.printPack();
 
         }
+        public void testMultiDeal() 
+        {
+            Pack pack = new Pack();
+            for (int i = 0; i <= 10; i++)
+            {
+                Pack.dealCard(5);
+            }
+        }
     }
 }
