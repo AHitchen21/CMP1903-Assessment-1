@@ -55,11 +55,11 @@ namespace CMP1903_Assessment_1
                 int cardCountHalf = pack.Count / 2;
                 List<Card> halfPack1 = new List<Card>(); //creates two new card lists that respresents 2 halves of the pack
                 List<Card> halfPack2 = new List<Card>();
-                for (int i = 0; i < (pack.Count / 2); i++) //iterates through the first half of the pack.
+                for (int i = 0; i < cardCountHalf; i++) //iterates through the first half of the pack.
                 {
                     halfPack1.Add(pack[i]); //adds the first half of the pack to halfPack1
                 }
-                for (int i = (pack.Count / 2) - 1; i < pack.Count; i++) //iterates through the second half of the pack.
+                for (int i = cardCountHalf - 1; i < pack.Count; i++) //iterates through the second half of the pack.
                 {
                     halfPack2.Add(pack[i]); //adds the second half of the pack to halfPack2
                 }

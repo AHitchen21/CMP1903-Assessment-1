@@ -11,9 +11,9 @@ namespace CMP1903_Assessment_1
         //Test Method that tests the shuffleCardPack method from Pack.cs
         public void shuffleTest()
         {
-            Pack pack = new Pack(); //creates a new Pack.
+            Pack shuffleTest = new Pack(); //creates a new Pack.
             Pack.shuffleCardPack(2); //shuffles the Pack twice (change values to test different shuffles).
-            pack.printPack(); //Prints the pack to console to see whether it has been shuffled or not.
+            shuffleTest.printPack(); //Prints the pack to console to see whether it has been shuffled or not.
         }
         //Method that purposely breaks the deal() method  in Pack.cs to test the exception.
         public void breakDeal() 
@@ -33,12 +33,12 @@ namespace CMP1903_Assessment_1
         //Tests the deal() method in Pack.cs
         public void testDeal()
         {
-            Pack pack = new Pack(); //creates a new Pack
+            Pack testDeal = new Pack(); //creates a new Pack
             Card dealtCard = new Card(); //creates a new Card
             try
             {
                 dealtCard = Pack.deal(); //sets the new Card to the dealt card value
-                pack.printPack(); //prints the pack
+                testDeal.printPack(); //prints the pack
                 Console.WriteLine("the card that was dealt: " + dealtCard.Suit.ToString() + " " + dealtCard.Value.ToString()); //prints the dealt card
             }
             catch (NullReferenceException e) 
@@ -49,7 +49,7 @@ namespace CMP1903_Assessment_1
         //Tests the dealCard() Method in Pack.cs
         public void testMultiDeal() 
         {
-            Pack pack = new Pack();
+            Pack multiDeal = new Pack();
             try
             {
                 Pack.dealCard(52); //deals 5 cards (can change value by dealing 5 cards)
