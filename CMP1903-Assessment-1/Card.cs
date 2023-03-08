@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CMP1903M_A01_2223
+namespace CMP1903_Assessment_1
 {
-    class Card
+    public class Card
     {
         //Base for the Card class.
         //Value: numbers 1 - 13
@@ -14,5 +14,6 @@ namespace CMP1903M_A01_2223
         //The 'set' methods for these properties could have some validation
         public int Value { get; set; }
         public int Suit { get; set; }
+        
     }
 }
